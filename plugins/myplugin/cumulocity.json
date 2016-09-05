@@ -1,0 +1,10 @@
+{
+  "name": "My First Plugin",
+  "description": "Beep boop, testing testing 123.",
+  "ngModules": [
+    "myapp.helloworld"
+  ],
+  "js": [
+    "index.js"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "availability": "PRIVATE",
+  "contextPath": "byb",
+  "key": "byb-appkey",
+  "name": "Brett's App",
+  "resourcesUrl": "https://raw.githubusercontent.com/bberry6/c8y-firstapp/master/build",
+  "type": "HOSTED",
+  "imports": [
+    "core/c8yBranding",
+    "byb/myplugin"
+  ]
+}
