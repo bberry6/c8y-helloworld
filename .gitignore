@@ -4,5 +4,5 @@
 Thumbs.db
 .cumulocity
 *.log
-node_nodules
+node_modules
 .npm
