@@ -2,9 +2,10 @@
   "name": "My First Plugin",
   "description": "Beep boop, testing testing 123.",
   "ngModules": [
-    "myapp.helloworld"
+    "myapp.backchannel"
   ],
   "js": [
-    "index.js"
+    "index.js",
+    "controllers/backChannel.js"
   ]
 }

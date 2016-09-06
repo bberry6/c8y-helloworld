@@ -3,7 +3,7 @@
   "contextPath": "byb",
   "key": "byb-appkey",
   "name": "Brett's App",
-  "resourcesUrl": "https://raw.githubusercontent.com/bberry6/c8y-firstapp/master/build",
+  "resourcesUrl": "https://raw.githubusercontent.com/bberry6/c8y-helloworld/master/build/",
   "type": "HOSTED",
   "imports": [
     "core/c8yBranding",
