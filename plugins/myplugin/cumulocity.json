@@ -1,5 +1,5 @@
 {
-  "name": "My First Plugin",
+  "name": "Back Channel",
   "description": "Beep boop, testing testing 123.",
   "ngModules": [
     "myapp.backchannel"
