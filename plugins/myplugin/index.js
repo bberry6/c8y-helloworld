@@ -1,6 +1,7 @@
 //Main module name must be defined in ngModules of the plugin manifest
-angular.module('myapp.backchannel', []).config(['c8yViewsProvider', 'c8yNavigator',
-function (c8yViewsProvider, c8yNavigator) {
+var dependencies = ['c8yViewsProvider', 'c8yNavigator'];
+
+function moduleConfig(c8yViewsProvider, c8yNavigator) {
   'use strict';
 
 
@@ -15,4 +16,7 @@ function (c8yViewsProvider, c8yNavigator) {
         controller: 'backChannelCtrl'
     });
 
-}]);
+}
+
+
+angular.module('myapp.backchannel', []).config(dependencies.concat(moduleConfig));
