@@ -5,8 +5,6 @@ function moduleConfig(c8yViewsProvider, c8yNavigator) {
   'use strict';
 
 
-  var navparts = c8yNavigator.getNavigator();
-  console.log('navparts: ', navparts);
 
   c8yViewsProvider.when('/device/:deviceId', {
         name: 'BackChannel',
