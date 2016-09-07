@@ -1,10 +1,7 @@
 //Main module name must be defined in ngModules of the plugin manifest
-var dependencies = ['c8yViewsProvider', 'c8yNavigator'];
-
-function moduleConfig(c8yViewsProvider, c8yNavigator) {
+angular.module('myapp.backchannel', []).config(['c8yViewsProvider',
+function (c8yViewsProvider) {
   'use strict';
-
-
 
   c8yViewsProvider.when('/device/:deviceId', {
         name: 'BackChannel',
@@ -14,7 +11,4 @@ function moduleConfig(c8yViewsProvider, c8yNavigator) {
         controller: 'backChannelCtrl'
     });
 
-}
-
-
-angular.module('myapp.backchannel', []).config(dependencies.concat(moduleConfig));
+}]);
