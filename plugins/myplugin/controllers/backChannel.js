@@ -2,9 +2,15 @@ var dependencies = ['$scope', '$routeParams', 'c8yDevices'];
 var backChannelController = function($scope, $routeParams, c8yDevices) {
   'use strict';
 
-   $scope.hello = 'Hello world!';
+   $scope.hello = 'Hello cruel world!';
    $scope.sendCmd = function(){
       console.log('device id: ', $routeParams.deviceId);
+      if($routeParams.deviceId){
+         c8yDevices.detail($routeParams.deviceId).then(function (res) {
+            console.log('device  data: ', res);
+         });
+      }
+
       /*
       var operation = {
          deviceId: $routeParams.deviceId,
