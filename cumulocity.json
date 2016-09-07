@@ -7,8 +7,7 @@
    "type": "HOSTED",
    "imports": [
       "core/c8yBranding",
-      "core/deviceList",
-      "core/deviceDetail",
+      "devicemanagement/deviceGroupList",
       "byb/myplugin"
    ]
 }
