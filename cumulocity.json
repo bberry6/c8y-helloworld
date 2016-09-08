@@ -7,7 +7,6 @@
    "type": "HOSTED",
    "imports": [
       "core/c8yBranding",
-      "core/"
       "byb/myplugin"
    ]
 }
