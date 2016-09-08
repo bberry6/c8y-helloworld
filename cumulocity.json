@@ -2,11 +2,12 @@
    "availability": "PRIVATE",
    "contextPath": "byb",
    "key": "byb-appkey",
-   "name": "Brett's App",
+   "name": "byb-test",
    "resourcesUrl": "https://raw.githubusercontent.com/bberry6/c8y-helloworld/master/build/",
    "type": "HOSTED",
    "imports": [
       "core/c8yBranding",
+      "core/"
       "byb/myplugin"
    ]
 }
