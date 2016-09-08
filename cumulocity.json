@@ -2,12 +2,11 @@
    "availability": "PRIVATE",
    "contextPath": "byb",
    "key": "byb-appkey",
-   "name": "byb-test",
+   "name": "byb",
    "resourcesUrl": "https://raw.githubusercontent.com/bberry6/c8y-helloworld/master/build/",
    "type": "HOSTED",
    "imports": [
       "core/c8yBranding",
-      "devicemanagement/groupsHierarchy",
       "byb/myplugin"
    ]
 }

@@ -14,7 +14,8 @@
       "grunt-cumulocity-ui-tasks": "1.1.4"
    },
    "scripts": {
-      "register": "grunt pluginRegisterAll --host=\"machines.cloud\" && grunt appRegister --host=\"machines.cloud\"",
-      "build":"grunt build"
+      "register": "grunt pluginRegisterAll --host=machines.cloud && grunt appRegister --host=machines.cloud",
+      "build":"grunt build",
+      "server":"npm run build && npm run register && grunt server --host=machines.cloud"
    }
 }
