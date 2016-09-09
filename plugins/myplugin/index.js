@@ -22,8 +22,8 @@ function moduleFn(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) {
 
 }
 
-
-angular.module('myapp.backchannel', []).config(deps.concat(moduleFn));
+moduleFn.$inject = deps;
+angular.module('myapp.backchannel', []).config(moduleFn);
 
 
 /*
