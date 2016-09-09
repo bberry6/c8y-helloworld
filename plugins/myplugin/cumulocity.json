@@ -1,11 +1,11 @@
 {
-  "name": "hello world",
+  "name": "Back Channel",
   "description": "Beep boop, testing testing 123.",
   "ngModules": [
-    "myapp.helloworld"
+    "myapp.backchannel"
   ],
   "js": [
     "index.js",
-    "controllers/helloworld.js"
+    "controllers/backChannel.js"
   ]
 }
