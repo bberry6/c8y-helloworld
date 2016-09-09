@@ -4,7 +4,7 @@ var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider) {
   'use strict';
 
   c8yNavigatorProvider.addNavigation({
-    name: 'New plugin',
+    name: 'See Hello',
     icon: 'cube',
     priority: 100000,
     path: 'hello'
