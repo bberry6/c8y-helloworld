@@ -9,6 +9,7 @@ function (c8yNavigatorProvider, c8yViewsProvider) {
     priority: 100000,
     path: 'hello'
   });
+  
 
   c8yViewsProvider.when('/hello', {
     // Please use this string placeholder where you want to refer you plugin path.
