@@ -18,7 +18,7 @@ var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) 
   });
 
 }
-angular.module('myapp.backchannel', ['c8yManagedObject']).config(deps.concat(moduleFn));
+angular.module('myapp.backchannel', []).config(deps.concat(moduleFn));
 
 
 /*
