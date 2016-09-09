@@ -1,24 +1,22 @@
 //Main module name must be defined in ngModules of the plugin manifest
-var deps = ['c8yNavigatorProvider', 'c8yViewsProvider', 'c8yDeviceGroup'];
-var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) {
-   'use strict';
+var deps = ['c8yNavigatorProvider', 'c8yViewsProvider'];
+var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider) {
+  'use strict';
 
-   c8yNavigatorProvider.addNavigation({
-      name: 'New plugin',
-      icon: 'cube',
-      priority: 100000,
-      path: 'hello'
-   });
+  console.log('1');
 
-   c8yViewsProvider.when('/hello', {
-      // Please use this string placeholder where you want to refer you plugin path.
-      templateUrl: ':::PLUGIN_PATH:::/views/index.html',
-      controller: 'backChannelCtrl'
-   });
+  c8yNavigatorProvider.addNavigation({
+    name: 'New plugin',
+    icon: 'cube',
+    priority: 100000,
+    path: 'hello'
+  });
 
-   c8yDeviceGroup.list().then(function(r){
-      console.log('device groups: ', r);
-   });
+  c8yViewsProvider.when('/hello', {
+    // Please use this string placeholder where you want to refer you plugin path.
+    templateUrl: ':::PLUGIN_PATH:::/views/index.html',
+    controller: 'backChannelCtrl'
+  });
 
 }
 angular.module('myapp.backchannel', []).config(deps.concat(moduleFn));
