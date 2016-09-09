@@ -1,6 +1,6 @@
 //Main module name must be defined in ngModules of the plugin manifest
-var deps = ['c8yNavigatorProvider', 'c8yViewsProvider'];
-var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider) {
+var deps = ['c8yNavigatorProvider', 'c8yViewsProvider', 'c8yDeviceGroup'];
+var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) {
   'use strict';
 
   c8yNavigatorProvider.addNavigation({
