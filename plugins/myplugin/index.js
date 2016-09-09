@@ -1,6 +1,6 @@
 //Main module name must be defined in ngModules of the plugin manifest
-angular.module('myapp.backchannel', []).config(['c8yNavigatorProvider', 'c8yViewsProvider',
-function (c8yNavigatorProvider, c8yViewsProvider) {
+var deps = ['c8yNavigatorProvider', 'c8yViewsProvider'];
+var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider) {
   'use strict';
 
   c8yNavigatorProvider.addNavigation({
@@ -9,7 +9,7 @@ function (c8yNavigatorProvider, c8yViewsProvider) {
     priority: 100000,
     path: 'hello'
   });
-  
+
 
   c8yViewsProvider.when('/hello', {
     // Please use this string placeholder where you want to refer you plugin path.
@@ -17,7 +17,8 @@ function (c8yNavigatorProvider, c8yViewsProvider) {
     controller: 'backChannelCtrl'
   });
 
-}]);
+}
+angular.module('myapp.backchannel', []).config(deps.concat(moduleFn));
 
 
 /*
