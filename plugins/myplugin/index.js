@@ -1,6 +1,5 @@
 //Main module name must be defined in ngModules of the plugin manifest
-var deps = ['c8yNavigatorProvider', 'c8yViewsProvider', 'c8yDeviceGroup'];
-var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) {
+angular.module('myapp.backchannel', ['c8yManagedObject']).config(['c8yNavigatorProvider', 'c8yViewsProvider', 'c8yDeviceGroup', function(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) {
    'use strict';
 
    c8yDeviceGroup.list().then(function(r){
@@ -21,8 +20,7 @@ var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider, c8yDeviceGroup) 
    });
 
 }
-
-angular.module('myapp.backchannel', ['c8yManagedObject']).config(deps.concat(moduleFn));
+]);
 
 
 /*
