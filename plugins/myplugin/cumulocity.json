@@ -6,6 +6,8 @@
   ],
   "js": [
     "index.js",
-    "controllers/backChannel.js"
+    "controllers/backChannel.js",
+    "controllers/group.js",
+    "controllers/device.js"
   ]
 }
