@@ -1,2 +1,11 @@
-<h1>{{devid}}</h1>
-<button class='btn btn-default' ng-click="sendToDevice()">sendToDevice</button>
+<div class="row">
+   <h1>{{devId}}</h1>
+</div>
+<div class="row">
+   <div class="col-sm-4">
+      <stw-operations-form device-id="devId"></stw-operations-form>
+   </div>
+   <div class="col-sm-8">
+      <stw-operations operations="operations"></stw-operations>
+   </div>
+</div>

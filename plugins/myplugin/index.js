@@ -1,18 +1,27 @@
 //Main module name must be defined in ngModules of the plugin manifest
-var deps = ['c8yNavigatorProvider', 'c8yViewsProvider'];
-var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider) {
+var deps = ['c8yNavigatorProvider', 'c8yViewsProvider', 'c8yTabsProvider'];
+var moduleFn = function(c8yNavigatorProvider, c8yViewsProvider, c8yTabsProvider) {
    'use strict';
-
-   console.log('6');
 
    c8yViewsProvider.when('/mygroups/:groupId', {
       templateUrl: ':::PLUGIN_PATH:::/views/group.html',
       controller: 'groupCtrl'
    });
 
-   c8yViewsProvider.when('/mygroups/device/:deviceId', {
+   c8yViewsProvider.when('/mygroups/device/:deviceId/back_channel', {
       templateUrl: ':::PLUGIN_PATH:::/views/device.html',
       controller: 'deviceCtrl'
+   });
+
+   c8yViewsProvider.when('/', {
+      templateUrl: ':::PLUGIN_PATH:::/views/index.html',
+      controller: 'indexCtrl'
+   });
+
+   c8yTabsProvider.addTab('/mygroups/device/:deviceId', {
+     name: 'Back Channel',
+     icon: 'arrow-circle-down',
+     priority: 1000
    });
 
 }
@@ -28,6 +37,7 @@ mod.run(['c8yNavigator','c8yDeviceGroup', function(c8yNavigator, c8yDeviceGroup)
          if(an < bn) return 1;
          return 0;
       });
+
       var ct = 1000;
       var navs = groups.reduce(function(resultNavs, group, i){
 
@@ -42,8 +52,8 @@ mod.run(['c8yNavigator','c8yDeviceGroup', function(c8yNavigator, c8yDeviceGroup)
             return {
                parent: group.name,
                name: itm.managedObject.name,
-               path: 'mygroups/device/' + itm.managedObject.id,
-               icon: 'exchange',
+               path: 'mygroups/device/' + itm.managedObject.id + '/back_channel',
+               icon: 'car',
                priority: ct++
             };
          });

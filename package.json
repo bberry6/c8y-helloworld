@@ -16,7 +16,7 @@
    "scripts": {
       "register": "grunt pluginRegisterAll --host=machines.cloud && grunt appRegister --host=machines.cloud",
       "build":"grunt build",
-      "server":"npm run build && npm run register && grunt server --host=developer.machines.cloud",
+      "server":"grunt server --host=developer.machines.cloud",
       "all": "npm run build && npm run register && git add . && git commit -m \"...\" && git push origin master"
    }
 }

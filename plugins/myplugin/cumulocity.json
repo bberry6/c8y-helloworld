@@ -6,8 +6,10 @@
   ],
   "js": [
     "index.js",
-    "controllers/backChannel.js",
     "controllers/group.js",
-    "controllers/device.js"
+    "controllers/device.js",
+    "controllers/index.js",
+    "directives/operations/list/operations.js",
+    "directives/operations/form/opForm.js"
   ]
 }
