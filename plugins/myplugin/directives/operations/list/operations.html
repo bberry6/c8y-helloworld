@@ -1,3 +1,5 @@
-<div ng-repeat="op in operations">
-   <span>{{op.description}} - {{op.status}}</span>
+<div class="list-group" ng-repeat="op in operations | limitTo: 5">
+   <div class="list-group-item">
+      <stw-operation op='op'></stw-operation>
+   </div>
 </div>

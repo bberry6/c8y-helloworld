@@ -10,6 +10,7 @@
     "controllers/device.js",
     "controllers/index.js",
     "directives/operations/list/operations.js",
-    "directives/operations/form/opForm.js"
+    "directives/operations/form/opForm.js",
+    "directives/operations/operation/op.js"
   ]
 }

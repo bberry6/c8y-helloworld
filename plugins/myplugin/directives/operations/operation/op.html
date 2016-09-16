@@ -1,3 +1,6 @@
-<div ng-repeat="op in operations">
-   <stw-operation op='op'></stw-operation>
+<div>
+   <i ng-class="op.status === statuses.SUCCESSFUL ? 'fa fa-fw fa-check-circle' :
+                op.status === statuses.FAILED ? 'fa fa-fw fa-exclamation-circle' :
+                op.status === statuses.PENDING ? 'fa fa-circle-o-notch fa-spin fa-3x fa-fw' : ''"
+                aria-hidden="true"></i>&nbsp;{{op.description}}
 </div>
