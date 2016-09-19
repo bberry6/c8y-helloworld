@@ -1,11 +1,13 @@
 <div class="row">
-   <h1>{{devId}}</h1>
+   <div class="col-sm-4">
+      <h1>{{devId}}</h1>
+   </div>
 </div>
 <div class="row">
    <div class="col-sm-4">
       <stw-operations-form deviceid="devId"></stw-operations-form>
    </div>
    <div class="col-sm-8">
-      <stw-operations operations="operations"></stw-operations>
+      <stw-operations deviceid="devId"></stw-operations>
    </div>
 </div>

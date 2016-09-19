@@ -1,5 +1,16 @@
-<div class="list-group" ng-repeat="op in operations | limitTo: 5">
-   <div class="list-group-item">
-      <stw-operation op='op'></stw-operation>
+<div class="panel panel-default">
+   <div class="panel-heading">Results</div>
+   <div class="deviceops list-group" ng-repeat="op in operations | orderBy:'creationTime':true | limitTo: 5">
+      <div class="list-group-item">
+         <i ng-class="op.status === statuses.PENDING ? 'fa fa-fw fa-circle-o-notch fa-spin' :
+                      op.status === statuses.EXECUTING ? 'text-warning fa fa-fw fa-cog fa-spin' :
+                      op.status === statuses.SUCCESSFUL ? 'text-success fa fa-fw fa-check-circle' :
+                      op.status === statuses.FAILED ? 'text-danger fa fa-fw fa-exclamation-circle' : ''"
+                      aria-hidden="true"></i>
+         <span ng-click="openIt(op)">{{op.description}}</span>
+         <div ng-if="op.isOpen">
+            <span>{{op.c8y_Command.result}}</span>
+         </div>
+      </div>
    </div>
 </div>

@@ -10,7 +10,8 @@
             },
             description: $scope.description
          };
-          c8yDeviceControl.create(shellCmd);
+         console.log('sending shell cmd: ', shellCmd);
+         c8yDeviceControl.create(shellCmd);
       };
    }
 

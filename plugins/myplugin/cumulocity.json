@@ -11,6 +11,9 @@
     "controllers/index.js",
     "directives/operations/list/operations.js",
     "directives/operations/form/opForm.js",
-    "directives/operations/operation/op.js"
+    "bower_components/ramda/dist/ramda.js"
+  ],
+  "css": [
+    "styles/device.css"
   ]
 }
