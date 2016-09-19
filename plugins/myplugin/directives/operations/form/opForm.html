@@ -3,12 +3,12 @@
    <div class="panel-body">
       <form>
          <div class="form-group">
-            <label for="operation">Operation</label>
-            <input type="text" class="form-control" ng-model="command" id="operation" placeholder="hostname">
+            <label>Operation
+            <input type="text" class="form-control" ng-model="command" placeholder="hostname"></label>
          </div>
          <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" ng-model='description' id="description" placeholder="Get serial number">
+            <label >Description
+            <input type="text" class="form-control" ng-model='description' placeholder="Get serial number"></label>
          </div>
          <button type="submit" class="btn btn-default" ng-click="sendToDevice()">Send</button>
       </form>
